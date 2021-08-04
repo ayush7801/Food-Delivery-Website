@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cravy</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merriweather:wght@300&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" media="screen and (max-width: 1080px)" type="text/css" href="css/phone.css">
+    <!-- //practice js -->
+    <script>
+        class car{
+            constructor(_name,year){
+                this._name=_name;
+                this.year = year;
+            }
+            company() {
+                return this._name;
+            } 
+            age(x){
+                console.log("in age(x)");
+                return x-this.year;
+            }
+            set name(x){
+                console.log("I am hera");
+                this._name = x;
+            }
+            get name(){
+                return this._name;
+            }
+        }
+        class subcar extends car{
+            constructor(color,name,year){
+                super(name, year);
+                this._color = color;
+            }
+            age(x){
+                return x-super.name;
+            }
+        }
+
+        let myCar = new car("Ford");
+        
+        console.log(myCar.age());
+        let mysubcar = new subcar('black','BMW',2003);
+        console.log(mysubcar.age(2000));
+    </script>    
+    <!-- practice end -->
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="img/logo/food-delivery-6070101_1920.png">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services_container">Services</a></li>
+            <li class="item"><a href="#client_section">About Us</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to Cravy</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Deleniti sint unde laboriosam at iure 
+            veniam odit dolorem! Consectetur, sit ratione neque ducimus 
+            et animi libero commodi deserunt tenetur vitae vero.
+        </p>
+        <button class="btn">Order Now</button>
+    </section>
+
+    <section class="services-container" id="services_container">
+        <h1 class="h-primary center">
+            Our Services
+        </h1>
+        <div id="services">
+            <div class="box">
+                <img src="img/cake-1971552_1920.jpg" alt="Yummy Cake">
+                <h2 class="h-secondary center">
+                    Food Ordering
+                </h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Nostrum in tempora odio dolore sapiente pariatur voluptas 
+                    placeat amet, earum natus. Doloremque perferendis
+                    , omnis animi officia enim dolor distinctio eius vel.
+                </p>
+            </div>
+            <div class="box">
+                <img src="img/platter-2009590_1920.jpg" alt="Yummy Cake">
+                <h2 class="h-secondary center">
+                    Catering
+                </h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Nostrum in tempora odio dolore sapiente pariatur voluptas 
+                    placeat amet, earum natus. Doloremque perferendis
+                    , omnis animi officia enim dolor distinctio eius vel.
+                </p>
+            </div>
+            <div class="box">
+                <img src="img/cheese-6156628_1920.jpg" alt="Yummy Cake">
+                <h2 class="h-secondary center">
+                    Bulk Ordering
+                </h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Nostrum in tempora odio dolore sapiente pariatur voluptas 
+                    placeat amet, earum natus. Doloremque perferendis
+                    , omnis animi officia enim dolor distinctio eius vel.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="client-section" id="client_section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="img/companyLogo/microsoft-80658_1280.png" alt="Microsoft Logo">
+            </div>
+            <div class="client-item">
+                <img src="img/companyLogo/iconfinder_4373166_fedex_logo_logos_icon_512px.png" alt="FedEx Logo">
+            </div>
+            <div class="client-item">
+                <img src="img/companyLogo/iconfinder_4373145_google_logo_logos_icon_512px.png" alt="Google Logo">
+            </div>
+            <div class="client-item">
+                <img src="img/companyLogo/iconfinder_4373129_f_facebook_logo_logos_icon_512px.png" alt="Facebook Logo">
+            </div>
+            <div class="client-item">
+                <img src="img/companyLogo/iconfinder_4373114_logo_logos_mcdonalds_icon_512px.png" alt="MacDonald's Logo">
+            </div>
+            <div class="client-item">
+                <img src="img/companyLogo/iconfinder_2993701_apple_brand_brands_ios_logo_icon_512px.png" alt="Apple Logo">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="Pno">Phone Number: </label>
+                    <input type="tel" name="pno" id="Pno">
+                </div>
+                <div class="form-group">
+                    <label for="mess">Message: </label>
+                    <textarea name="mess" id="mess" cols="30" rows="5"></textarea>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div>
+                Copyright &copy; www.Cravy.com All rights reserved
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
